@@ -1,14 +1,18 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+#![warn(rust_2018_idioms, future_incompatible)]
+#![deny(clippy::all, clippy::if_not_else, clippy::enum_glob_use)]
+#![cfg_attr(clippy, deny(warnings))]
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+pub mod event;
+pub mod event_loop;
+pub mod grid;
+pub mod index;
+pub mod selection;
+pub mod sync;
+pub mod term;
+pub mod thread;
+pub mod tty;
+pub mod vi_mode;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub use crate::grid::Grid;
+pub use crate::term::Term;
+pub use vte;
