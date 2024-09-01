@@ -114,6 +114,15 @@ dependencies = [
 [[package]]
 name = "termist_config_derive"
 version = "0.1.0"
+dependencies = [
+ "log",
+ "proc-macro2",
+ "quote",
+ "serde",
+ "syn",
+ "termist_config",
+ "toml",
+]
 
 [[package]]
 name = "termist_terminal"
