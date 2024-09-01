@@ -4,3 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+log = { version = "0.4.17", features = ["serde"] }
+serde = "1.0.163"
+toml = "0.8.2"
+
+[dev-dependencies]
+termist_config_derive = { version = "0.1.0", path = "../termist_config_derive" }
+serde = { version = "1.0.163", features = ["derive"] }
